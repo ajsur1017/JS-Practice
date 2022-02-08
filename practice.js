@@ -100,3 +100,15 @@ console.log(animals.slice(2, -1));
 
 console.log(animals.slice());
 // expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+console.log(arr3.slice(1,4))
+// indexOf
+const arr4 = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,7,1,1,1,1,1,1,1,1,1,1,1]
+console.log(arr4.indexOf(7))
+// string split
+const hello = "Hello World"
+console.log(hello.split("")) // splits each letter
+console.log(hello.split(" ")) // splits each word
+// array join
+const suc = ["s","u","c","c","e","s"]
+console.log(suc.join("")) // succes
+console.log(suc.join(" ")) // s u c c e s
