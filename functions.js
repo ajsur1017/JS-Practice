@@ -39,6 +39,14 @@ console.log(b, c)
 console.log(exp(10, 2))
 console.log(div(10, 2))
 
+const isItEven = (x) => x % 2 === 0
+if (isItEven(20)){
+    console.log("it is even")
+} else {
+    console.log("it is odd")
+}
+
+
 const fizzBuzz = () => {
     for (let i = 1; i <= 100; i++) {
         if (i % 15 === 0) {
