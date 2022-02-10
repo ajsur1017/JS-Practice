@@ -28,6 +28,9 @@ const mult = (x, y) => x * y
 const div = (x, y) => x / y
 const exp = (x, y) => x ** y
 
+console.log(add(2,4) + add(3,2))
+console.log(add(3,2) + add(4,2) - sub(1,4))
+
 let a = 5;
 a++;
 const b = a
@@ -92,3 +95,27 @@ fizzBuzz3(3)
 fizzBuzz3(5)
 fizzBuzz3(6)
 fizzBuzz2(2)
+
+const myFunc = () => {
+    console.log("function stuff")
+}
+console.log(myFunc) // Logs the function
+console.log(myFunc()) // Logs 'function stuff' and undefined since no return falue.
+
+const myFunc2 = () => {
+    return "split function stuff"
+}
+console.log(myFunc2().split(''))
+
+const palindrome = (word) => {
+    var splitStr = word.split('')
+    var revStr = splitStr.reverse('')
+    var joinStr = revStr.join('')
+    if (joinStr === word) {
+        return `${word} is a palindrome`
+    } else {
+        return `${word} is not a palindome`
+    }
+}
+console.log(palindrome('racecar'))
+console.log(palindrome('monkey wrench'))
