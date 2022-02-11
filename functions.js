@@ -119,3 +119,37 @@ const palindrome = (word) => {
 }
 console.log(palindrome('racecar'))
 console.log(palindrome('monkey wrench'))
+
+const loopy = (num) => {
+    for (let i = 0; i <= num; i++) {
+        console.log(i);
+    }
+    return num
+}
+loopy(10);
+
+// RECURSION
+const loopy2 = (num) => {
+    if (num === 0) {
+        return 0;
+    } else {
+        console.log(num);
+        loopy2(num - 1);
+    }
+}
+loopy2(10); 
+
+const loopy3 = (num) => {
+    if (num === 100) {
+        return 100;
+    } else {
+        console.log(num);
+        loopy3(num + 1);
+    }
+}
+loopy3(10);
+
+
+// iffy?
+(() => {console.log("why do you work and what do you do???")})();
+
