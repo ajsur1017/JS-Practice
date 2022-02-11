@@ -112,3 +112,63 @@ console.log(hello.split(" ")) // splits each word
 const suc = ["s","u","c","c","e","s"]
 console.log(suc.join("")) // succes
 console.log(suc.join(" ")) // s u c c e s
+
+const myFunction = (argObject) => {
+    console.log(argObject.cheese)
+    console.log(argObject.bread)
+}
+
+// Objects as arguments and destructuring rguments
+myFunction({
+    cheese: "Gouda",
+    bread: "Rye",
+    taco: "this wont be there"
+})
+myFunction({
+    taco: "wow",
+    beep: "alsowow",
+    boop: "meow"
+}) // return two undefined since parameter objects are not called
+
+const myFunction2 = ({cheese = "Cheddar", bread = "White"}) => {
+    console.log(cheese)
+    console.log(bread)
+}
+
+myFunction2({
+    cheese: "Gouda",
+    bread: "Rye"
+})
+
+myFunction2({}) // defualts to original declared parameters
+
+
+// functions as arguements and return values
+
+const myFunction3 = (callback) => {
+    callback()
+}
+
+const argFunc = () => console.log("this function was used as an argument!")
+
+// pass previously defined functions as arguments
+myFunction3(argFunc)
+
+// define function directly when invoking
+myFunction3(() => console.log("I am an arrow function passed into a function"))
+
+// return a function
+//Function to create the function
+const whoIsTheOwner = (name) => {
+    return (item) => {
+        console.log(`${name} is the owner of ${item}`)
+    }
+}
+
+const theReturnedFunction = whoIsTheOwner("Anthony")
+theReturnedFunction("PlayStation 5")
+theReturnedFunction("Nintendo Switch")
+
+const anotherReturnedFunction = whoIsTheOwner("Jen")
+anotherReturnedFunction("Xbox Series X")
+anotherReturnedFunction("Nintendo Switch Also")
