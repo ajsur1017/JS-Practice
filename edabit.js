@@ -24,3 +24,4 @@ function leapYear(year) {
 	return year % 4 === 0;
 }
 
+const convert = (minutes) => minutes * 60
