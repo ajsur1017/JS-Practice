@@ -17,7 +17,6 @@ array.shift()
 // remove the last and first value of the array
 // add another character to the front and back of the array
 // log the array
-// paste your code as a snippet in a thread on slack and give the post an emoji
 
 const destinyChars = ["Cayde", "Ikora", "Zavala"]
 console.log(destinyChars.length)
