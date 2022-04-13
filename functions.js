@@ -153,3 +153,42 @@ loopy3(10);
 // iffy?
 (() => {console.log("why do you work and what do you do???")})();
 
+const people2 = [
+    {
+        name: 'Dom',
+        occupation: 'Software Engineer'
+    },
+    {
+        name: 'Eric',
+        occupation: 'Dentist'
+    },
+    {
+        name: 'Kate',
+        occupation: 'Hair Dresser'
+    }
+];
+
+function isDentist(person) {
+    return person.occupation === 'Dentist'
+}
+function isDom(person) {
+    return person.name === 'Dom'
+}
+function isSoftwareEngineer(person) {
+    return person.occupation === 'Software Engineer'
+}
+
+console.log(people2.findIndex(isDentist))
+console.log(people2.findIndex(isDom))
+console.log(people2.findIndex(isSoftwareEngineer))
+
+
+const jpmcArr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+const JPMC15 = (index) => {
+    return index === 15
+}
+console.log(jpmcArr.findIndex(JPMC15))
+
+
+
